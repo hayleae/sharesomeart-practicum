@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User</title>
+    <!-- Notyf -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css"
+    />
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <style>
+      body {
+        background-color: #f8f9fa;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .nav-item .active {
+        font-weight: 500;
+      }
+
+      .nav-link:hover {
+        font-weight: 500;
+      }
+
+      .left-col,
+      .right-col {
+        background-color: #198754;
+        min-height: 100vh;
+      }
+
+      .username-section {
+        text-align: center;
+        margin-top: 30px;
+      }
+
+      .username-section h2 {
+        font-weight: bold;
+        color: #333;
+      }
+
+      .stats {
+        text-align: center;
+        margin-top: 10px;
+        font-size: 1.1rem;
+      }
+
+      .posts-section {
+        margin-top: 40px;
+      }
+
+      .post-box {
+        border: 1px solid #ddd;
+        padding: 20px;
+        border-radius: 10px;
+        margin-bottom: 20px;
+        background-color: white;
+      }
+
+      .nav-item .active {
+        font-weight: 500;
+      }
+
+      .nav-link:hover {
+        font-weight: 500;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Josh Navbar (from search.html) -->
+    <nav class="navbar navbar-dark navbar-expand-sm bg-success">
+      <div class="container-fluid">
+        <a
+          class="navbar-brand ms-3"
+          href="/feed.html"
+          style="background-color: white"
+        >
+          <img width="70px" height="70px" src="../images/logo.svg" alt="Logo" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Navigation Toggle"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link text-light" href="/feed.html">Feed</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light" href="/search.html">Search</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light" href="/create-post.html"
+                >Create Post</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link text-light active"
+                aria-current="page"
+                href="/user.html"
+                >User</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main content -->
+    <div class="container-fluid">
+      <div class="row">
+        <!-- Left green column -->
+        <div class="col-md-2 left-col"></div>
+
+        <!-- Center content -->
+        <div class="col-md-8">
+          <div class="d-flex justify-content-between align-items-center mt-4">
+            <h2></h2>
+            <button id="logoutButton" class="btn btn-danger w-30">
+              Logout
+            </button>
+          </div>
+          <!-- User info -->
+          <h2 class="username mt-4 text-capitalize"></h2>
+          <p class="follower-following text-secondary mt-2"></p>
+
+          <!-- Posts header -->
+          <h4 id="posts-header" class="text-capitalize"></h4>
+          <div id="user-posts" class="row mt-3"></div>
+        </div>
+
+        <!-- Right green column -->
+        <div class="col-md-2 right-col"></div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js"></script>
+    <script src="/user.js"></script>
+  </body>
+</html>
